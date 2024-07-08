@@ -1,0 +1,492 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "username": "admin",
+      "password": 123456,
+      "roleState": true,
+      "default": true,
+      "region": "",
+      "roleId": 1
+    },
+    {
+      "username": "steelEgg",
+      "password": "123",
+      "roleState": true,
+      "default": false,
+      "region": "",
+      "roleId": 1,
+      "id": 3
+    },
+    {
+      "username": "Zhuge",
+      "password": "123",
+      "roleState": true,
+      "default": false,
+      "region": "North America",
+      "roleId": 2,
+      "id": 4
+    },
+    {
+      "username": "Ximen",
+      "password": "123",
+      "roleState": true,
+      "default": false,
+      "region": "Antarctica",
+      "roleId": 3,
+      "id": 5
+    },
+    {
+      "username": "Xuyuan",
+      "password": "123",
+      "roleState": true,
+      "default": false,
+      "region": "Antarctica",
+      "roleId": 3,
+      "id": 6
+    },
+    {
+      "username": "Sima",
+      "password": "123",
+      "roleState": true,
+      "default": false,
+      "region": "Asia",
+      "roleId": 3,
+      "id": 7
+    },
+    {
+      "username": "guru",
+      "password": "123",
+      "roleState": true,
+      "default": false,
+      "region": "Asia",
+      "roleId": 3,
+      "id": 8
+    },
+    {
+      "username": "starbug",
+      "password": "123456",
+      "region": "South America",
+      "roleId": 3,
+      "roleState": true,
+      "default": false,
+      "id": 9
+    },
+    {
+      "username": "lhh",
+      "password": "123456",
+      "region": "North America",
+      "roleId": 2,
+      "roleState": true,
+      "default": false,
+      "id": 10
+    },
+    {
+      "username": "Babel12",
+      "password": "112",
+      "region": "Europe",
+      "roleId": 2,
+      "id": 11,
+      "role": {
+        "id": 2,
+        "roleName": "Region Admin",
+        "roleType": 2,
+        "rights": [
+          "/home",
+          "/user-manage",
+          "/user-manage/add",
+          "/user-manage/delete",
+          "/user-manage/update",
+          "/user-manage/list",
+          "/news-manage/list",
+          "/news-manage/add",
+          "/publish-manage",
+          "/publish-manage/unpublished",
+          "/publish-manage/published",
+          "/publish-manage/sunset",
+          "/news-manage",
+          "/audit-manage",
+          "/audit-manage/audit",
+          "/audit-manage/list",
+          "/right-manage/right/delete",
+          "/right-manage/role/update",
+          "/right-manage/right/update",
+          "/right-manage/role/delete",
+          "/right-manage",
+          "/right-manage/role/list",
+          "/news-manage/update/:id",
+          "/news-manage/preview/:id",
+          "/news-manage/draft",
+          "/news-manage/category"
+        ]
+      }
+    }
+  ],
+  "roles": [
+    {
+      "id": 1,
+      "roleName": "Super Admin",
+      "roleType": 1,
+      "rights": [
+        "/user-manage/add",
+        "/user-manage/delete",
+        "/user-manage/update",
+        "/right-manage",
+        "/right-manage/right/list",
+        "/right-manage/role/update",
+        "/right-manage/right/update",
+        "/news-manage",
+        "/news-manage/list",
+        "/news-manage/add",
+        "/news-manage/update/:id",
+        "/news-manage/preview/:id",
+        "/news-manage/draft",
+        "/news-manage/category",
+        "/audit-manage",
+        "/audit-manage/audit",
+        "/audit-manage/list",
+        "/publish-manage",
+        "/publish-manage/unpublished",
+        "/publish-manage/published",
+        "/publish-manage/sunset",
+        "/user-manage",
+        "/user-manage/list",
+        "/right-manage/role/list",
+        "/right-manage/role/delete",
+        "/right-manage/right/delete",
+        "/home"
+      ]
+    },
+    {
+      "id": 2,
+      "roleName": "Region Admin",
+      "roleType": 2,
+      "rights": [
+        "/home",
+        "/user-manage",
+        "/user-manage/add",
+        "/user-manage/delete",
+        "/user-manage/update",
+        "/user-manage/list",
+        "/news-manage/list",
+        "/news-manage/add",
+        "/publish-manage",
+        "/publish-manage/unpublished",
+        "/publish-manage/published",
+        "/publish-manage/sunset",
+        "/news-manage",
+        "/audit-manage",
+        "/audit-manage/audit",
+        "/audit-manage/list",
+        "/right-manage/right/delete",
+        "/right-manage/role/update",
+        "/right-manage/right/update",
+        "/right-manage/role/delete",
+        "/right-manage",
+        "/right-manage/role/list",
+        "/news-manage/update/:id",
+        "/news-manage/preview/:id",
+        "/news-manage/draft",
+        "/news-manage/category"
+      ]
+    },
+    {
+      "id": 3,
+      "roleName": "Region Editor",
+      "roleType": 3,
+      "rights": [
+        "/home",
+        "/audit-manage",
+        "/audit-manage/list",
+        "/publish-manage",
+        "/publish-manage/unpublished",
+        "/publish-manage/published",
+        "/publish-manage/sunset",
+        "/audit-manage/audit",
+        "/news-manage/list",
+        "/news-manage/add",
+        "/news-manage/update/:id",
+        "/news-manage/preview/:id",
+        "/news-manage/draft",
+        "/news-manage/category",
+        "/news-manage"
+      ]
+    }
+  ],
+  "children": [
+    {
+      "id": 3,
+      "title": "Add User",
+      "rightId": 2,
+      "key": "/user-manage/add",
+      "grade": 2
+    },
+    {
+      "id": 4,
+      "title": "Delete User",
+      "rightId": 2,
+      "key": "/user-manage/delete",
+      "grade": 2
+    },
+    {
+      "id": 5,
+      "title": "Update User",
+      "rightId": 2,
+      "key": "/user-manage/update",
+      "grade": 2
+    },
+    {
+      "id": 6,
+      "title": "User List",
+      "rightId": 2,
+      "key": "/user-manage/list",
+      "pagepermisson": 1,
+      "grade": 2
+    },
+    {
+      "id": 8,
+      "title": "Role List",
+      "rightId": 7,
+      "key": "/right-manage/role/list",
+      "pagepermisson": 1,
+      "grade": 2
+    },
+    {
+      "id": 9,
+      "title": "Right List",
+      "rightId": 7,
+      "key": "/right-manage/right/list",
+      "pagepermisson": 1,
+      "grade": 2
+    },
+    {
+      "id": 10,
+      "title": "Update Role",
+      "rightId": 7,
+      "key": "/right-manage/role/update",
+      "grade": 2
+    },
+    {
+      "id": 11,
+      "title": "Delete Role",
+      "rightId": 7,
+      "key": "/right-manage/role/delete",
+      "grade": 2
+    },
+    {
+      "id": 12,
+      "title": "Update Right",
+      "rightId": 7,
+      "key": "/right-manage/right/update",
+      "grade": 2
+    },
+    {
+      "id": 13,
+      "title": "Delete Right",
+      "rightId": 7,
+      "key": "/right-manage/right/delete",
+      "grade": 2
+    },
+    {
+      "id": 15,
+      "title": "News List",
+      "rightId": 14,
+      "key": "/news-manage/list",
+      "grade": 2
+    },
+    {
+      "id": 16,
+      "title": "Add News",
+      "rightId": 14,
+      "key": "/news-manage/add",
+      "grade": 2,
+      "pagepermisson": 1
+    },
+    {
+      "id": 17,
+      "title": "Update News",
+      "rightId": 14,
+      "key": "/news-manage/update/:id",
+      "grade": 2,
+      "routepermisson": 1
+    },
+    {
+      "id": 18,
+      "title": "News Preview",
+      "rightId": 14,
+      "key": "/news-manage/preview/:id",
+      "grade": 2,
+      "routepermisson": 1
+    },
+    {
+      "id": 19,
+      "title": "Draft",
+      "rightId": 14,
+      "key": "/news-manage/draft",
+      "pagepermisson": 1,
+      "grade": 2
+    },
+    {
+      "id": 20,
+      "title": "Category",
+      "rightId": 14,
+      "key": "/news-manage/category",
+      "pagepermisson": 1,
+      "grade": 2
+    },
+    {
+      "id": 22,
+      "title": "Audit",
+      "rightId": 21,
+      "key": "/audit-manage/audit",
+      "pagepermisson": 1,
+      "grade": 2
+    },
+    {
+      "id": 23,
+      "title": "Audit List",
+      "rightId": 21,
+      "key": "/audit-manage/list",
+      "pagepermisson": 1,
+      "grade": 2
+    },
+    {
+      "id": 25,
+      "title": "Unpublished",
+      "rightId": 24,
+      "key": "/publish-manage/unpublished",
+      "pagepermisson": 1,
+      "grade": 2
+    },
+    {
+      "id": 26,
+      "title": "Published",
+      "rightId": 24,
+      "key": "/publish-manage/published",
+      "pagepermisson": 1,
+      "grade": 2
+    },
+    {
+      "id": 27,
+      "title": "Archived",
+      "rightId": 24,
+      "key": "/publish-manage/sunset",
+      "pagepermisson": 1,
+      "grade": 2
+    }
+  ],
+  "rights": [
+    {
+      "id": 1,
+      "title": "Home",
+      "key": "/home",
+      "pagepermisson": 1,
+      "grade": 1
+    },
+    {
+      "id": 2,
+      "title": "User",
+      "key": "/user-manage",
+      "pagepermisson": 1,
+      "grade": 1
+    },
+    {
+      "id": 7,
+      "title": "Right",
+      "key": "/right-manage",
+      "pagepermisson": 1,
+      "grade": 1
+    },
+    {
+      "id": 14,
+      "title": "News",
+      "key": "/news-manage",
+      "pagepermisson": 1,
+      "grade": 1
+    },
+    {
+      "id": 21,
+      "title": "Audit",
+      "key": "/audit-manage",
+      "pagepermisson": 1,
+      "grade": 1
+    },
+    {
+      "id": 24,
+      "title": "Publish",
+      "key": "/publish-manage",
+      "pagepermisson": 1,
+      "grade": 1
+    }
+  ],
+  "categories": [
+    {
+      "id": 1,
+      "title": "Current Affairs",
+      "value": "Current Affairs"
+    },
+    {
+      "id": 2,
+      "title": "Global Economy",
+      "value": "Global Economy"
+    },
+    {
+      "id": 3,
+      "title": "Science and Technology",
+      "value": "Science and Technology"
+    },
+    {
+      "id": 4,
+      "title": "Military World",
+      "value": "Military World"
+    },
+    {
+      "id": 5,
+      "title": "World Sports",
+      "value": "World Sports"
+    },
+    {
+      "id": 6,
+      "title": "Lifestyle and Finance",
+      "value": "Lifestyle and Finance"
+    }
+  ],
+  "regions": [
+    {
+      "id": 1,
+      "title": "Asia",
+      "value": "Asia"
+    },
+    {
+      "id": 2,
+      "title": "Europe",
+      "value": "Europe"
+    },
+    {
+      "id": 3,
+      "title": "North America",
+      "value": "North America"
+    },
+    {
+      "id": 4,
+      "title": "South America",
+      "value": "South America"
+    },
+    {
+      "id": 5,
+      "title": "Africa",
+      "value": "Africa"
+    },
+    {
+      "id": 6,
+      "title": "Oceania",
+      "value": "Oceania"
+    },
+    {
+      "id": 7,
+      "title": "Antarctica",
+      "value": "Antarctica"
+    }
+  ],
+  "news": []
+}
